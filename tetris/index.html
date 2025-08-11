@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Tetris</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simple Tetris</h1>
+      <div class="game">
+        <canvas id="board" width="300" height="600" aria-label="Tetris game board" role="img"></canvas>
+        <div class="sidebar">
+          <div class="stats">
+            <div>Score: <span id="score">0</span></div>
+            <div>Level: <span id="level">1</span></div>
+            <div>Lines: <span id="lines">0</span></div>
+          </div>
+          <div class="next-wrapper">
+            <div class="next-title">Next</div>
+            <canvas id="next" width="120" height="120" aria-label="Next piece"></canvas>
+          </div>
+          <div class="buttons">
+            <button id="startBtn" type="button">Start</button>
+            <button id="pauseBtn" type="button">Pause</button>
+            <button id="resetBtn" type="button">Reset</button>
+          </div>
+          <div class="help">
+            <p>
+              Controls:
+              <br />
+              Left/Right: Move
+              <br />
+              Up: Rotate
+              <br />
+              Down: Soft drop
+              <br />
+              Space: Hard drop
+              <br />
+              P: Pause, R: Reset
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

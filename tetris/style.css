@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: #0f1220;
+  color: #e9ecf1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: min(100%, 920px);
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 16px 0;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  color: #e9ecf1;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: 300px 220px;
+  gap: 24px;
+}
+
+#board {
+  border: 2px solid #2a2e45;
+  background: #151835;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stats div {
+  padding: 8px 12px;
+  background: #171a3a;
+  border: 1px solid #2a2e45;
+  border-radius: 8px;
+}
+
+.next-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.next-title {
+  opacity: 0.85;
+}
+
+#next {
+  background: #151835;
+  border: 2px solid #2a2e45;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #2a2e45;
+  background: #1b1f4a;
+  color: #e9ecf1;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+button:hover {
+  background: #242a64;
+}
+
+.help {
+  opacity: 0.8;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .game {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    order: -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    flex: 1 1 100%;
+  }
+}
